@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activities.CreateEmailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="From"
+            android:maxLines="1" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="To"
+            android:maxLines="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:inputType="textEmailSubject"
+            android:layout_height="wrap_content"
+            android:hint="Subject"
+            android:maxLines="1" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Cc"
+            android:maxLines="1" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Bcc"
+            android:maxLines="1" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:hint="Date and time"
+            android:maxLines="1" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Content"
+            android:maxLines="30" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button_send"
+        android:text="Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
 
 </RelativeLayout>
